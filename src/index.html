@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
+    <header class="text-center">
+      <h1 class="text-6xl mb-10">Jquery-Tailwind Alıştırması</h1>
+    </header>
+
+    <main class="flex flex-col items-center py-3">
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold">Başlık 1</h2>
+        <p>
+          Varsayılan olarak siyah olan tüm h2 başlıkları Jquery ile kırmızıya
+          çevrilmiştir.
+        </p>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold mb-1">
+          Butonların Arka Plan Renginin Değiştirilmesi
+        </h2>
+
+        <div class="flex flex-col items-center">
+          <div class="flex gap-5">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-1"
+            >
+              Buton 1
+            </button>
+
+            <button
+              class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mb-1"
+            >
+              Buton 1
+            </button>
+            <button
+              class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mb-1"
+            >
+              Buton 1
+            </button>
+          </div>
+
+          <p>
+            Varsayılan renkleri sırasıyla mavi, kırmızı ve turuncu olan üstteki
+            butonların renkleri Jquery ile yeşile çevrilmiştir. Genel
+            stillendirme olduğu için aşağıdaki butonların da rengi buradakilerle
+            aynı olacaktır.
+          </p>
+        </div>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold">Jquery Actions</h2>
+
+        <p>Paragraf 1</p>
+        <p id="paragraf-2">Paragraf 2</p>
+        <p class="mb-3">Paragraf 3</p>
+        <p>3 paragraftan ikincisi hide() action'ı ile gizlenmiştir.</p>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold">Jquery Mouse Eventleri</h2>
+
+        <p
+          class="bg-blue-500 text-white font-bold py-2 px-4 mt-3 mb-5"
+          id="hiding-text"
+        >
+          Beni gizle
+        </p>
+
+        <button
+          class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mb-1 mt-1"
+          id="hide-me"
+        >
+          Gizle
+        </button>
+
+        <p>
+          Üstteki hide-me id'li butona basıldığında hiding-text id'li p elementi
+          gizlenecektir.
+        </p>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold">Jquery Klavye Eventleri</h2>
+
+        <p
+          id="keyboard-event-text"
+          class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-2 px-4 w-full mt-3"
+        >
+          H tuşuna basarak beni gizle. S tuşuna basarak beni göster.
+        </p>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold">Gecikmeli ve Animasyonlu Aksiyonlar</h2>
+
+        <p
+          id="delayed-text"
+          class="bg-gradient-to-r from-red-500 to-yellow-500 text-white py-2 px-4 w-full mt-3"
+        >
+          K tuşuna basarak beni 2 saniye gecikmeli olarak gizle. L tuşuna
+          basarak beni 2 saniye gecikmeli göster.
+        </p>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold mb-3">Toggle</h2>
+
+        <p
+          id="toggle-text"
+          class="bg-gradient-to-b from-blue-500 to-green-500 text-white py-2 px-4 w-full mb-3"
+        >
+          Toggle ile gizle/göster.
+        </p>
+
+        <button
+          id="toggle-button"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Toggle
+        </button>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold mb-3">
+          Fade Toggle ile Fade Out/Fade In
+        </h2>
+
+        <p
+          id="fade-out-text"
+          class="bg-gradient-to-b from-blue-500 to-pink-500 text-white py-2 px-4 w-full mb-3 text-center"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          sequi placeat consequatur necessitatibus eveniet, voluptatibus
+          provident deleniti reiciendis nisi ipsam tempora omnis, veritatis
+          delectus natus asperiores incidunt libero at sint.
+        </p>
+
+        <button
+          id="fade-out-button"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Toggle Fade out/Fade in
+        </button>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold mb-3">Fade to</h2>
+
+        <p id="fade-to-text" class="mb-3">
+          Fade to butonuna bastığınızda paragrafın yarı saydam olduğunu
+          göreceksiniz.
+        </p>
+
+        <button
+          id="fade-to-button"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Fade to
+        </button>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold mb-3">Slide Toggle</h2>
+
+        <p id="slideToggleText" class="mb-3">
+          Slide Toggle butonuna bastığınızda bu paragrafın aşağıdan yukarıya
+          doğru kapandığını göreceksiniz.
+        </p>
+
+        <button
+          id="slideToggleButton"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Slide Toggle
+        </button>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold mb-3">Animate Method</h2>
+
+        <p
+          id="animateText"
+          class="mb-3 bg-red-500 w-[200px] text-white text-center"
+        >
+          Bu metin kutusu aşağıdaki butona basıldığında genişleyecek, tekrar
+          basıldığında ise daralacaktır.
+        </p>
+
+        <button
+          id="animateButton"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Animate
+        </button>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold mb-3">Jquery ile DOM Manipülasyonu</h2>
+
+        <div class="flex flex-col items-center mb-5">
+          <h3 class="text-xl font-bold mb-3 text-fuchsia-500">Text Metodu</h3>
+
+          <p id="textToChange" class="mb-3 bg-yellow-300">
+            Aşağıdaki butona tıkladığınızda buradaki yazı değişecektir.
+          </p>
+
+          <button
+            id="changeButton"
+            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Değiştir
+          </button>
+        </div>
+
+        <div class="flex flex-col items-center mb-5">
+          <h3 class="text-xl font-bold mb-3 text-fuchsia-500">HTML Metodu</h3>
+
+          <p id="htmlToChange" class="mb-3 bg-yellow-300">
+            Aşağıdaki butona bastığınızda bu paragrafın tümü strong etiketiyle
+            vurgulanacaktır.
+          </p>
+          <button
+            id="htmlChangeButton"
+            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Vurgula
+          </button>
+        </div>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+
+      <section class="flex flex-col items-center mb-5">
+        <h2 class="text-3xl font-bold mb-3">
+          Form İşlemleri - Focus, Blur, Submit
+        </h2>
+
+        <form
+          class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          id="reg-form"
+        >
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="name"
+            >
+              Ad Soyad
+            </label>
+            <input
+              required
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="name"
+              type="text"
+              placeholder="Adınız ve soyadınız"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+            >
+              E-posta
+            </label>
+            <input
+              required
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="E-posta adresiniz"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2">
+              Cinsiyet
+            </label>
+            <div class="flex items-center">
+              <input
+                required
+                type="radio"
+                class="form-radio"
+                name="gender"
+                value="erkek"
+              />
+              <span class="ml-2">Erkek</span>
+            </div>
+            <div class="flex items-center">
+              <input
+                required
+                type="radio"
+                class="form-radio"
+                name="gender"
+                value="kadın"
+              />
+              <span class="ml-2">Kadın</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Gönder
+            </button>
+          </div>
+        </form>
+
+        <p class="w-6/12 text-center">
+          Yukarıdaki formun input alanlarına tıklandığında arka plan rengi
+          sarıya dönecektir. Input alanının dışına tıklandığında ise rengi
+          tekrar ilk haline dönecektir. Formdaki tüm alanlar doldurulup gönder
+          butonuna basıldıktan sonra bir alert penceresi açılacak ve formun
+          gönderildiğini söyleyecektir.
+        </p>
+      </section>
+
+      <hr class="border-b-2 border-black h-px w-full" />
+    </main>
+
+    <!-- Jquery CDN  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- script.js  -->
+    <script src="./script.js"></script>
+  </body>
+</html>
